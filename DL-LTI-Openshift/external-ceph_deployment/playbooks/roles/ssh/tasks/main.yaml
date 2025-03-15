@@ -57,3 +57,13 @@
      shell: "sshpass -p '{{ item.Host_Password }}' ssh-copy-id  -o StrictHostKeyChecking=no root@{{ item.ip }}"
      with_items: "{{ installer_admin }}"
 
+   - name: Configure SSH to disable host key checking
+     ansible.builtin.blockinfile:
+       path: ~/.ssh/config
+       block: |
+         Host *
+             StrictHostKeyChecking no
+             UserKnownHostsFile=/dev/null
+       create: yes
+       mode: '0600'
+

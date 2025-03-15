@@ -23,7 +23,7 @@ echo "============================================================"
 echo "============================================================"
 echo "Installing development tools"
 echo "============================================================"
-yum -y install @development
+yum -y groupinstall "Development Tools"
 
 echo "============================================================"
 echo "Installing Nginx server"

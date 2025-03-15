@@ -24,6 +24,7 @@ echo "============================================================"
 if [ -f /etc/redhat-release ]; then
     OS="RHEL"
     PACKAGE_MANAGER="yum"
+#    DEV_TOOLS="Development Tools"
     FIREWALL_SERVICE="firewalld"
     SYSTEMCTL="systemctl"
     PYTHON_PKG="python3"

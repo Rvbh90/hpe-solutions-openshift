@@ -12,7 +12,7 @@
   - import_playbook: playbooks/add_hosts.yaml
   - import_playbook: playbooks/add_osd.yaml
   - import_playbook: playbooks/client_user.yaml
-  - import_playbook: playbooks/copy_script.yaml
+    #  - import_playbook: playbooks/copy_script.yaml
   - import_playbook: playbooks/rbd.yaml
   - import_playbook: playbooks/fs.yaml
   - import_playbook: playbooks/rgw.yaml

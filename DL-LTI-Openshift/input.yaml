@@ -1,144 +1,154 @@
 servers:
- - Server_serial_number: 2M20510XXX
-   ILO_Address: 172.28.*.*
+ - Server_serial_number: 3M1D0S139S
+   ILO_Address: 172.28.0.11
    ILO_Username: admin
-   ILO_Password: *****
-   Hostname: headnode1.XX.XX                #ex. headnode1.isv.local
+   ILO_Password: Password!234
+   Hostname: headnode1.srihitha.local                #ex. headnode1.isv.local
    Host_Username: root
-   Host_Password: ******
-   HWADDR1: XX:XX:XX:XX:XX:XX             #mac address for server physical interface1 
-   HWADDR2: XX:XX:XX:XX:XX:XX             #mac address for server physical interface2 
+   Host_Password: Password!234
+   HWADDR1: 88:e9:a4:cb:32:1c             #mac address for server physical interface1 
+   HWADDR2: 88:e9:a4:cb:32:1d             #mac address for server physical interface2 
    Host_OS_disk: sda
-   Host_VlanID: 230                         #solution VLAN ID ex. 230
-   Host_IP: 172.28.*.*
-   Host_Netmask: 255.*.*.*
-   Host_Prefix: XX                          #ex. 8,24,32
-   Host_Gateway: 172.28.*.*
-   Host_DNS: 172.28.*.*
-   Host_Domain: XX.XX                       #ex. isv.local
-   corporate_proxy: 172.28.*.*              #provide corporate proxy, ex. proxy.houston.company.net
-   corporate_proxy_port: XX                 #corporate proxy port no, ex. 8080
+   Host_VlanID:                          #solution VLAN ID ex. 230
+   Host_IP: 172.28.0.101
+   Host_Netmask: 255.255.255.0
+   Host_Prefix: 24                          #ex. 8,24,32
+   Host_Gateway: 172.28.0.2
+   Host_DNS: 172.28.0.2
+   Host_Domain: srihitha.local                       #ex. isv.local
+   corporate_proxy:               #provide corporate proxy, ex. proxy.houston.company.net
+   corporate_proxy_port:                  #corporate proxy port no, ex. 8080
 
- - Server_serial_number: 2M20510XXX
-   ILO_Address: 172.28.*.*
+ - Server_serial_number: 3M1D0S139T
+   ILO_Address: 172.28.0.12
    ILO_Username: admin
-   ILO_Password: *****
-   Hostname: headnode2.XX.XX                #ex. headnode2.isv.local
+   ILO_Password: Password!234
+   Hostname: headnode2.srihitha.local               #ex. headnode2.isv.local
    Host_Username: root
-   Host_Password: ******
-   HWADDR1: XX:XX:XX:XX:XX:XX             #mac address for server physical interface1 
-   HWADDR2: XX:XX:XX:XX:XX:XX             #mac address for server physical interface2 
+   Host_Password: Password!234
+   HWADDR1: 88:e9:a4:cb:32:3c             #mac address for server physical interface1 
+   HWADDR2: 88:e9:a4:cb:32:3d             #mac address for server physical interface2 
    Host_OS_disk: sda
-   Host_VlanID: 230
-   Host_IP: 172.28.*.*
-   Host_Netmask: 255.*.*.*
-   Host_Prefix: XX                          #ex. 8,24,32
-   Host_Gateway: 172.28.*.*
-   Host_DNS: 172.28.*.*
-   Host_Domain: XX.XX                       #ex. isv.local
-   corporate_proxy: 172.28.*.*              #provide corporate proxy, ex. proxy.houston.hpecorp.net
-   corporate_proxy_port: XX                #corporate proxy port no, ex. 8080
+   Host_VlanID: 
+   Host_IP: 172.28.0.102
+   Host_Netmask: 255.255.255.0
+   Host_Prefix: 24                          #ex. 8,24,32
+   Host_Gateway: 172.28.0.2
+   Host_DNS: 172.28.0.2
+   Host_Domain: srihitha.local                       #ex. isv.local
+   corporate_proxy:               #provide corporate proxy, ex. proxy.houston.hpecorp.net
+   corporate_proxy_port:                 #corporate proxy port no, ex. 8080
 
- - Server_serial_number: 2M20510XXX
-   ILO_Address: 172.28.*.*
+ - Server_serial_number: 3M1D0S139R
+   ILO_Address: 172.28.0.13
    ILO_Username: admin
-   ILO_Password: *****
-   Hostname: headnode3.XX.XX                #ex. headnode3.isv.local
+   ILO_Password: Password!234
+   Hostname: headnode3.srihitha.local                #ex. headnode3.isv.local
    Host_Username: root
-   Host_Password: ******
-   HWADDR1: XX:XX:XX:XX:XX:XX             #mac address for server physical interface1 
-   HWADDR2: XX:XX:XX:XX:XX:XX             #mac address for server physical interface2
+   Host_Password: Password!234
+   HWADDR1: 88:e9:a4:cb:32:f4             #mac address for server physical interface1 
+   HWADDR2: 88:e9:a4:cb:32:f5             #mac address for server physical interface2
    Host_OS_disk: sda
-   Host_VlanID: 230
-   Host_IP: 172.28.*.*
-   Host_Netmask: 255.*.*.*
-   Host_Prefix: XX                          #ex. 8,24,32
-   Host_Gateway: 172.28.*.*
-   Host_DNS: 172.28.*.*
-   Host_Domain: XX.XX                       #ex. isv.local
-   corporate_proxy: 172.28.*.*              #provide corporate proxy, ex. proxy.houston.hpecorp.net
-   corporate_proxy_port: XX               #corporate proxy port no, ex. 8080
+   Host_VlanID: 
+   Host_IP: 172.28.0.103
+   Host_Netmask: 255.255.255.0
+   Host_Prefix: 24                          #ex. 8,24,32
+   Host_Gateway: 172.28.0.2
+   Host_DNS: 172.28.0.2
+   Host_Domain: srihitha.local                       #ex. isv.local
+   corporate_proxy:               #provide corporate proxy, ex. proxy.houston.hpecorp.net
+   corporate_proxy_port:                #corporate proxy port no, ex. 8080
 
 config:
-   HTTP_server_base_url: http://172.28.*.*/  #Installer IP address
+   HTTP_server_base_url: http://172.28.0.95/  #Installer IP address
    HTTP_file_path: /usr/share/nginx/html/    
    OS_type: rhel
-   OS_image_name: rhel-9.4-x86_64-dvd.iso    # ISO image should be present in /usr/share/nginx/html/
+   OS_image_name: RHEL-9.4.0-20240419.25-x86_64-dvd1.iso    # ISO image should be present in /usr/share/nginx/html/
    base_kickstart_filepath: /opt/hpe-solutions-openshift/DL-LTI-Openshift/playbooks/roles/rhel9_os_deployment/tasks/ks_rhel9.cfg
 
-rhsub_username: ******
-rhsub_password: ******
-pool_id: ************                         #Pool ID for Redhat OpenShift Container Platform and Openshift Infrastructure
+rhsub_username: eaj@hpe.com
+rhsub_password: Password!234
+pool_id: 2c94760e887329bc018890fcda3c5143                         #Pool ID for Redhat OpenShift Container Platform and Openshift Infrastructure
 
 common:
-   ifcfg_filename: ifcfg-bridge0.*                #network-scripts OS network filename with static IP, ifcfg-bridge0.230          
-   interface_name: bridge0.*                      #ex. bridge0.230
-   base_domain: XX.XX                             #ex. isv.local
-   reverse_zone: xx.28.172.in-addr.arpa
-   app_domain: XX.XX.XX                           #ex. ocp.isv.local
+   ifcfg_filename: ifcfg-bridge0                #network-scripts OS network filename with static IP, ifcfg-bridge0.230          
+   interface_name: bridge0                      #ex. bridge0.230
+   base_domain: srihitha.local                             #ex. isv.local
+   reverse_zone: 0.28.172.in-addr.arpa
+   app_domain: ocp.srihitha.local                           #ex. ocp.isv.local
    customerforwarderdns_fqdn: resolver.hpecorp.net
-   solution_subnet_ip: 172.28.*.*/24
-   ansible_engine_ip: 172.28.*.*
+   solution_subnet_ip: 172.28.0.0/24
+   ansible_engine_ip: 172.28.0.100
 
-solution_network_ip: 172.28.*.*
-corporate_ntp: *.*.*.*                         #Corporate NTP server IP address
+solution_network_ip: 172.28.0.2
+corporate_ntp: 16.110.135.123                         #Corporate NTP server IP address
 
-master_binddns: 172.28.*.*
-slave1_binddns: 172.28.*.*
-slave2_binddns: 172.28.*.*
+master_binddns: 172.28.0.101
+slave1_binddns: 172.28.0.102
+slave2_binddns: 172.28.0.103
 
-VIP: 172.28.*.*
+VIP: 172.28.0.125
 VIP_Prefix: 24
-haproxy_fqdn: haproxy.X.X.X
+haproxy_fqdn: haproxy.ocp.srihitha.local
 
-squid_proxy_IP: 172.28.*.*
+squid_proxy_IP: 
 
-corporate_proxy: 172.28.*.*
-corporate_proxy_port: XX
-squid_port: XX                                 #ex. 3128
+corporate_proxy: 
+corporate_proxy_port: 
+squid_port:                                  #ex. 3128
 
 ocp_bootstrap:
  - name: bootstrap
-   ip: 172.28.*.*
-   fqdn: bootstrap.X.X.X                         #ex. bootstrap.ocp.isv.local
-   mac_address: XX:XX:XX:XX:XX:XX                #ex. 52:54:00:3e:f5:c1
+   ip: 172.28.0.104
+   fqdn: bootstrap.ocp.srihitha.local                         #ex. bootstrap.ocp.isv.local
+   mac_address: a0:b1:b2:d1:e1:f5                #ex. 52:54:00:3e:f5:c1
 
 ocp_masters:
  - name: master1
-   ip: 172.28.*.*
-   fqdn: master1.X.X.X                           #ex. master1.ocp.isv.local
-   mac_address: 
+   ip: 172.28.0.105
+   fqdn: master1.ocp.srihitha.local                           #ex. master1.ocp.isv.local
+   mac_address: a0:b1:b2:d1:e1:f6
  - name: master2
-   ip: 172.28.*.*
-   fqdn: master2.X.X.X
-   mac_address: 
+   ip: 172.28.0.106
+   fqdn: master2.ocp.srihitha.local
+   mac_address: a0:b1:b2:d1:e1:f7
  - name: master3
-   ip: 172.28.*.*
-   fqdn: master3.X.X.X
-   mac_address: 
+   ip: 172.28.0.107
+   fqdn: master3.ocp.srihitha.local
+   mac_address: a0:b1:b2:d1:e1:f8
 
 ocp_workers:
  - name: worker1
-   ip: 172.28.*.*
-   fqdn: worker1.*.*.*                          #ex. mworker1.ocp.isv.local
-   mac_address: ### If user add core os worker to cluster then update mac address, if it rhel worker leave it empty
+   ip: 172.28.0.108
+   fqdn: worker1.ocp.srihitha.local                          #ex. mworker1.ocp.isv.local
+   mac_address: 88:e9:a4:d2:bc:70         ### If user add core os worker to cluster then update mac address, if it rhel worker leave it empty
  - name: worker2
-   ip: 172.28.*.*
-   fqdn: worker2.*.*.*
-   mac_address:
+   ip: 172.28.0.109
+   fqdn: worker2.ocp.srihitha.local
+   mac_address: 88:e9:a4:d2:bc:5e
  - name: worker3
-   ip: 172.28.*.*
-   fqdn: worker3.*.*
-   mac_address:
+   ip: 172.28.0.110
+   fqdn: worker3.ocp.srihitha.local
+   mac_address: 88:e9:a4:d2:ac:3e
+ - name: worker4
+   ip: 172.28.0.111
+   fqdn: worker4.ocp.srihitha.local
+   mac_address: a0:88:c2:56:51:18
+ - name: worker5
+   ip: 172.28.0.112
+   fqdn: worker5.ocp.srihitha.local
+   mac_address: a0:88:c2:6a:0f:ce
+
+
 
 dns_forwarder:
- - ip:         #customer upstream DNS 
- - ip:         #customer upstream DNS
+ - ip: 172.28.0.2         #customer upstream DNS 
 
-ocp_version: x.x.x                           #ex. 4.15.13
+ocp_version: 4.18.4                           #ex. 4.15.13
 
-sshKey: ''
-pull_secret: '' 
+sshKey: 'ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQC+q7JG/hMt1e/LkJVT/Gphc3habmJW5aBTelstv1ZNTPI8O9LGzg1Rg5dMCID8W4+R9miSAkHNr6SiklVLIXS0nbBrx5U+xIl6PrIBne3DbouiWfTpOo6Ri6Ii7a/SXnjb7fCYEYHDSDfJCjDkx83uFAQuL1KP7jztDnUtOzVtFMieXWM1/Mj8khC1rpYSHYQpkFSRMpI8Wj52yyoDasueMUP2rsP2Odd8r/yodnHrO/8AckVwxRR8+eJ/v0SXMUUZIgP6fDrZfKScaIggcZjyf0cRS2O8FW7ulo5ePTqjGGwQGbGnvy2ftQGYbEuo8W8JORowSnDUa/rCwq4gNaUdGErl6chULM5Ejjj9XiIWLdItJ7gFO/KqYl5W2tmWOO+vdgCMNRoQtOES2ExosXhfQJttuZ2nBy4RRJO/qONGk31r+D/nYGWQ7FWfMMu6NB2LKjG9MdCP7d3cCE/TlbkBJ7E2FuJNxieaNogpHwY9YDbtxu5St71/qWfiPpu7EmU= root@installer.srihitha.local'
+
+pull_secret: '{"auths":{"cloud.openshift.com":{"auth":"b3BlbnNoaWZ0LXJlbGVhc2UtZGV2K29jbV9hY2Nlc3NfOTgyOWVmOGM5MTJhNDljNjhjYzBmYmMwYzdhNTY2ZDA6TkZNRTMxMjRCUkQzNUpTRUZSSFYyTUhSWFAyUFpHMFRYRUVBWlNPRk9JNDVMWDAxRDNZWEhaSFQ4S1hTT01HRw==","email":"eaj@hpe.com"},"quay.io":{"auth":"b3BlbnNoaWZ0LXJlbGVhc2UtZGV2K29jbV9hY2Nlc3NfOTgyOWVmOGM5MTJhNDljNjhjYzBmYmMwYzdhNTY2ZDA6TkZNRTMxMjRCUkQzNUpTRUZSSFYyTUhSWFAyUFpHMFRYRUVBWlNPRk9JNDVMWDAxRDNZWEhaSFQ4S1hTT01HRw==","email":"eaj@hpe.com"},"registry.connect.redhat.com":{"auth":"fHVoYy1wb29sLWM5MTliNGZjLTg5OGMtNDNkOS1iMzYwLTM4M2I1YzRjOGRiZTpleUpoYkdjaU9pSlNVelV4TWlKOS5leUp6ZFdJaU9pSmhaVFUzTkRjMU5HWTBNek0wWlRjd1lXUmpaRFU0TlRsbE5EUmtNelJoTXlKOS5jaU13QWhxT1NTYXZfSHZjZVprVlFnOXZqNE9qQVVKT09DTG5BZ0J1Ykk3WDMxY2pHVkJHNnRqc3ZxR0FWckJkam5mYTZIQlFrc1Uwa0h2ZUNVQkNWN3ZWYjdvRUVTUlI3eDdIZjY5Uk9YdWk4a1hKS0ltYkxrdnZfVS1HQUlRN3ZjY2EybmtrZ09aM1hCUTJ4NjRpWF9UUUZSLVFMQ0xmREYxNWVUS3lxNzBiMGtwa1BoX3pTUlBLWHM2VTdFVGZOdHdJMW9RRUgtWXBWWjh4VFgyLW01TU13MFhBS0xhNVZCS01EbFBqeEM2SjBzckY5NWhrQV9mV0pJb1paSlY5UWtXb25seFgxdEloTEZBWEwwVTlZN2NteEtEejNlTGhRUlNHajB0YkxBTHJpVHYtemJaakdQakNCdnVQNWYtdkVGYXRnT0k1QjRpcEliOU8yY3JoR0NCQkZCVWRLQnRiMHpQbVhSakNrY1VCSWlXRXpiQkh2U3dyY2Q0bC1pMXV6NUNmWkw5WHA4anJfTnY0ZXhQLWlINXkzbi1zcTdncmE4WWFaRGo4Q0FZQW1qYzk5azc0SlN6WGFSMHFDUjZJb2J4elVEVkNRclVOdE1IMUU0X0o0eC1sSjhmR1JCdHR3SVp5UHdSMjZNQ3VhcEJqWFJwUVV1d3FmZjhIeDJpRlRTVkhWV3piSDZxdXFfeC1zcDg2TXlONEZJeXRQNkx6b1JPUnlWRUFOS0tzazZhOWZPQVpOXzZaTzdBT0tZc3ZSM0lCQy02MDhTUFkyTWcwNUktYnM1UWJxT3B3ODcwMGhjb0RCSFJhNUx3R1daenYtRDBRNi1rNTM3bXV0SmRJTWE2UTZDUXJ0WHFhWEJKelRYNTdlOU4yQnNDTDBWS1pZaVdXQzdXNVg5SQ==","email":"eaj@hpe.com"},"registry.redhat.io":{"auth":"fHVoYy1wb29sLWM5MTliNGZjLTg5OGMtNDNkOS1iMzYwLTM4M2I1YzRjOGRiZTpleUpoYkdjaU9pSlNVelV4TWlKOS5leUp6ZFdJaU9pSmhaVFUzTkRjMU5HWTBNek0wWlRjd1lXUmpaRFU0TlRsbE5EUmtNelJoTXlKOS5jaU13QWhxT1NTYXZfSHZjZVprVlFnOXZqNE9qQVVKT09DTG5BZ0J1Ykk3WDMxY2pHVkJHNnRqc3ZxR0FWckJkam5mYTZIQlFrc1Uwa0h2ZUNVQkNWN3ZWYjdvRUVTUlI3eDdIZjY5Uk9YdWk4a1hKS0ltYkxrdnZfVS1HQUlRN3ZjY2EybmtrZ09aM1hCUTJ4NjRpWF9UUUZSLVFMQ0xmREYxNWVUS3lxNzBiMGtwa1BoX3pTUlBLWHM2VTdFVGZOdHdJMW9RRUgtWXBWWjh4VFgyLW01TU13MFhBS0xhNVZCS01EbFBqeEM2SjBzckY5NWhrQV9mV0pJb1paSlY5UWtXb25seFgxdEloTEZBWEwwVTlZN2NteEtEejNlTGhRUlNHajB0YkxBTHJpVHYtemJaakdQakNCdnVQNWYtdkVGYXRnT0k1QjRpcEliOU8yY3JoR0NCQkZCVWRLQnRiMHpQbVhSakNrY1VCSWlXRXpiQkh2U3dyY2Q0bC1pMXV6NUNmWkw5WHA4anJfTnY0ZXhQLWlINXkzbi1zcTdncmE4WWFaRGo4Q0FZQW1qYzk5azc0SlN6WGFSMHFDUjZJb2J4elVEVkNRclVOdE1IMUU0X0o0eC1sSjhmR1JCdHR3SVp5UHdSMjZNQ3VhcEJqWFJwUVV1d3FmZjhIeDJpRlRTVkhWV3piSDZxdXFfeC1zcDg2TXlONEZJeXRQNkx6b1JPUnlWRUFOS0tzazZhOWZPQVpOXzZaTzdBT0tZc3ZSM0lCQy02MDhTUFkyTWcwNUktYnM1UWJxT3B3ODcwMGhjb0RCSFJhNUx3R1daenYtRDBRNi1rNTM3bXV0SmRJTWE2UTZDUXJ0WHFhWEJKelRYNTdlOU4yQnNDTDBWS1pZaVdXQzdXNVg5SQ==","email":"eaj@hpe.com"}}}' 
 
 
 #####################################################################
@@ -147,8 +157,6 @@ pull_secret: ''
 #Path to ISV-OpenShift-develop Directory; Example: /opt/Openshift-Synergy-RA-LTI-OCP-4.12/DL-LTI-Openshift(no trailing forwardslash required)
 base_path: '/opt/hpe-solutions-openshift/DL-LTI-Openshift'
 
-
-#########  fill the below values for the airgap deployment #####
 #Is Environment Airgapped; ('yes' or 'no'):
 is_environment_airgap: 'no'
 mirror_registry_ip:                     #10.0.x.x
@@ -160,10 +168,10 @@ yumrepo:                                #10.0.x.x
 
 ###Common Networking
 # Interface Name of Rhel9 VM: interface_name: eth0
-interface_name: eth0
+interface_name: enp1s0
 
 # dhcp range that is used for OCP nodes Example: dhcp_range: 192.168.42.204,192.168.42.210,24h
-dhcp_range: 172.28.*.*,172.28.*.*
+dhcp_range: 172.28.0.101,172.28.0.119
 
 # DO not change these details
 # install media details Example: image_location: "/tmp/image/"
@@ -184,6 +192,6 @@ vm_mem: 16000                       #VM RAM detail
 vm_size: 250                        #VM virtual disk size is in GB
 
 #Rhel9 Installer VM details
-rhel9_installer_hostname: rhel9-installer.*.*
-rhel9_installer_IP: 172.28.*.*
-rhel9_installer_password: ******
+rhel9_installer_hostname: rhel9-installer.srihitha.local
+rhel9_installer_IP: 172.28.0.98
+rhel9_installer_password: Password!234
