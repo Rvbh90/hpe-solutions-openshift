@@ -135,7 +135,7 @@
              "console=tty0",
              "console=ttyS0",
              "coreos.inst=yes",
-             "coreos.inst.install_dev=/dev/vda",
+             "coreos.inst.install_dev=/dev/sda",
              "coreos.live.rootfs_url=http://{{ rhel9_installer_IP }}:8080/assets/{{ bios_uefi_name }}",
              "coreos.inst.ignition_url=http://{{ rhel9_installer_IP }}:8080/ignition?mac=${mac:hexhyp}"
             ]
